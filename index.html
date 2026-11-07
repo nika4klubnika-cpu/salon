@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumi Beauty Studio – salon kosmetyczny i fryzjerski</title>
+<meta name="description" content="Lumi Beauty Studio – fryzjer, manicure, kosmetyka twarzy i stylizacja brwi. Umów wizytę online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="#top" class="logo">Lumi<span>Beauty Studio</span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="menu" id="menu">
+      <a href="#uslugi">Usługi</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#kontakt" class="btn btn-small">Umów wizytę</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Pielęgnacja, która wygląda na Ciebie.</h1>
+        <p>Fryzjer, manicure, kosmetyka twarzy i brwi w jednym miejscu. Spokojna atmosfera, sprawdzone kosmetyki i czas tylko dla Ciebie.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn">Umów wizytę</a>
+          <a href="#uslugi" class="btn btn-ghost">Zobacz cennik</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="arch arch-1"></div>
+        <div class="arch arch-2"></div>
+        <div class="badge"><strong>9 lat</strong> doświadczenia</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="uslugi">
+    <div class="container">
+      <h2>Usługi i cennik</h2>
+      <p class="lead">Wybierz kategorię, aby zobaczyć ceny. Dokładną cenę ustalamy po konsultacji.</p>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="wlosy" role="tab">Włosy</button>
+        <button class="tab" data-tab="paznokcie" role="tab">Paznokcie</button>
+        <button class="tab" data-tab="twarz" role="tab">Twarz</button>
+        <button class="tab" data-tab="brwi" role="tab">Brwi i rzęsy</button>
+      </div>
+
+      <ul class="price-list active" id="wlosy">
+        <li><span>Strzyżenie damskie</span><b>od 90 zł</b></li>
+        <li><span>Strzyżenie męskie</span><b>od 60 zł</b></li>
+        <li><span>Koloryzacja</span><b>od 220 zł</b></li>
+        <li><span>Balayage / ombre</span><b>od 450 zł</b></li>
+        <li><span>Keratynowe prostowanie</span><b>od 350 zł</b></li>
+      </ul>
+      <ul class="price-list" id="paznokcie">
+        <li><span>Manicure klasyczny</span><b>70 zł</b></li>
+        <li><span>Manicure hybrydowy</span><b>110 zł</b></li>
+        <li><span>Przedłużanie żelem</span><b>od 180 zł</b></li>
+        <li><span>Pedicure hybrydowy</span><b>150 zł</b></li>
+      </ul>
+      <ul class="price-list" id="twarz">
+        <li><span>Oczyszczanie manualne</span><b>160 zł</b></li>
+        <li><span>Peeling kawitacyjny</span><b>120 zł</b></li>
+        <li><span>Mezoterapia mikroigłowa</span><b>od 280 zł</b></li>
+        <li><span>Zabieg nawilżający</span><b>180 zł</b></li>
+      </ul>
+      <ul class="price-list" id="brwi">
+        <li><span>Henna brwi</span><b>50 zł</b></li>
+        <li><span>Laminacja brwi</span><b>130 zł</b></li>
+        <li><span>Lifting rzęs</span><b>150 zł</b></li>
+        <li><span>Rzęsy 1:1</span><b>200 zł</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt" id="o-nas">
+    <div class="container about">
+      <div>
+        <h2>Mały salon, duża dbałość o szczegóły</h2>
+        <p>Jesteśmy zespołem trzech stylistek, które łączy jedno: lubimy, gdy klientka wychodzi zadowolona i pewna siebie. Pracujemy na profesjonalnych produktach, a każdą wizytę zaczynamy od rozmowy o Twoich potrzebach.</p>
+        <p>Dbamy o higienę, punktualność i spokojną atmosferę – bez pośpiechu.</p>
+      </div>
+      <ul class="facts">
+        <li><b>3</b> stylistki</li>
+        <li><b>2000+</b> zadowolonych klientek</li>
+        <li><b>100%</b> sterylizowane narzędzia</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="galeria">
+    <div class="container">
+      <h2>Galeria</h2>
+      <p class="lead">Tutaj wstaw zdjęcia swoich prac – wystarczy podmienić tło każdego kafelka na własne zdjęcie.</p>
+      <div class="gallery">
+        <div class="g g1"></div><div class="g g2"></div><div class="g g3"></div>
+        <div class="g g4"></div><div class="g g5"></div><div class="g g6"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="opinie">
+    <div class="container">
+      <h2>Opinie klientek</h2>
+      <div class="reviews">
+        <blockquote><p>Najlepsza koloryzacja, jaką miałam. Dokładnie taki kolor, jak chciałam, i włosy w świetnym stanie.</p><cite>Karolina M.</cite></blockquote>
+        <blockquote><p>Hybryda trzyma się ponad trzy tygodnie. Miła atmosfera i zawsze punktualnie.</p><cite>Agnieszka W.</cite></blockquote>
+        <blockquote><p>Laminacja brwi to strzał w dziesiątkę. Polecam każdej, kto chce wyglądać naturalnie.</p><cite>Magda S.</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <div class="container contact">
+      <div>
+        <h2>Umów wizytę</h2>
+        <p class="lead">Wypełnij formularz, a oddzwonimy w ciągu dnia, aby potwierdzić termin.</p>
+        <ul class="info">
+          <li><b>Adres</b>ul. Przykładowa 12, 00-000 Miasto</li>
+          <li><b>Telefon</b><a href="tel:+48123456789">+48 123 456 789</a></li>
+          <li><b>E-mail</b><a href="mailto:kontakt@lumibeauty.pl">kontakt@lumibeauty.pl</a></li>
+          <li><b>Godziny</b>pon.–pt. 9:00–20:00, sob. 9:00–15:00</li>
+        </ul>
+      </div>
+      <form id="booking" novalidate>
+        <label>Imię i nazwisko
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Telefon
+          <input type="tel" name="phone" autocomplete="tel" required placeholder="np. 600 123 456">
+        </label>
+        <label>Usługa
+          <select name="service" required>
+            <option value="">Wybierz usługę</option>
+            <option>Fryzjer</option>
+            <option>Manicure / pedicure</option>
+            <option>Kosmetyka twarzy</option>
+            <option>Brwi i rzęsy</option>
+          </select>
+        </label>
+        <label>Preferowany termin
+          <input type="date" name="date" required>
+        </label>
+        <label>Wiadomość (opcjonalnie)
+          <textarea name="message" rows="3"></textarea>
+        </label>
+        <button type="submit" class="btn">Wyślij zgłoszenie</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>© <span id="year"></span> Lumi Beauty Studio. Wszelkie prawa zastrzeżone.</span>
+    <a href="#top">Wróć na górę</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
