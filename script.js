@@ -20,31 +20,16 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
-// Formularz rezerwacji
-const form = document.getElementById('booking');
-const msg = form.querySelector('.form-msg');
-form.date.min = new Date().toISOString().split('T')[0];
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  let ok = true;
-  form.querySelectorAll('[required]').forEach(f => {
-    const bad = !f.value.trim() || (f.name === 'phone' && f.value.replace(/\D/g, '').length < 9);
-    f.classList.toggle('invalid', bad);
-    if (bad) ok = false;
-  });
-  msg.className = 'form-msg';
-  if (!ok) {
-    msg.textContent = 'Uzupełnij zaznaczone pola. Numer telefonu powinien mieć co najmniej 9 cyfr.';
-    msg.classList.add('err');
-    return;
-  }
-  // Tu podłącz wysyłkę (np. Formspree, EmailJS lub własny backend):
-  // fetch('https://formspree.io/f/TWOJ_ID', { method:'POST', body:new FormData(form) })
-  msg.textContent = 'Dziękujemy! Zgłoszenie wysłane – oddzwonimy, aby potwierdzić termin.';
-  msg.classList.add('ok');
-  form.reset();
-});
+// Pojawianie się sekcji przy przewijaniu
+const items = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  items.forEach(el => io.observe(el));
+} else {
+  items.forEach(el => el.classList.add('in'));
+}
 
 // Rok w stopce
 document.getElementById('year').textContent = new Date().getFullYear();
