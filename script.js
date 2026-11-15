@@ -1,35 +1,36 @@
-// Menu mobilne
-const burger = document.querySelector('.burger');
-const menu = document.getElementById('menu');
-burger.addEventListener('click', () => {
-  const open = menu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open);
-});
-menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  menu.classList.remove('open');
-  burger.setAttribute('aria-expanded', 'false');
-}));
+const menuButton = document.querySelector("#menu-toggle");
+const navigation = document.querySelector("#main-navigation");
 
-// Zakładki cennika
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.price-list').forEach(l => l.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  });
-});
-
-// Pojawianie się sekcji przy przewijaniu
-const items = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  items.forEach(el => io.observe(el));
-} else {
-  items.forEach(el => el.classList.add('in'));
+function setMenuOpen(isOpen) {
+  if (!menuButton || !navigation) return;
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute(
+    "aria-label",
+    isOpen ? "Zamknij menu" : "Otwórz menu",
+  );
+  navigation.classList.toggle("is-open", isOpen);
 }
 
-// Rok w stopce
-document.getElementById('year').textContent = new Date().getFullYear();
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    setMenuOpen(!isOpen);
+  });
+
+  navigation.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest('a[href^="#"]')) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) setMenuOpen(false);
+  });
+}
+
+const year = document.querySelector("#current-year");
+if (year) year.textContent = String(new Date().getFullYear());
