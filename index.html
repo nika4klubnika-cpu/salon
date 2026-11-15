@@ -1,210 +1,276 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lumi Beauty Studio – salon kosmetyczny i fryzjerski</title>
-<meta name="description" content="Lumi Beauty Studio – fryzjer, manicure, kosmetyka twarzy i stylizacja brwi. Zadzwoń i umów wizytę.">
-<meta name="theme-color" content="#fffaf9">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f1e9" />
+    <meta
+      name="description"
+      content="Lumière Beauty Studio — kameralne studio manicure, stylizacji brwi i rzęs oraz pielęgnacji twarzy. Umów chwilę dla siebie."
+    />
+    <meta property="og:title" content="Lumière Beauty Studio" />
+    <meta
+      property="og:description"
+      content="Twoje piękno. Nasza pasja. Kameralne studio beauty — umów swoją wizytę."
+    />
+    <title>Lumière Beauty Studio | Twoje piękno. Nasza pasja</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#home" aria-label="Lumière Beauty Studio — strona główna">
+          <span class="brand-name">Lumière</span>
+          <span class="brand-sub">Beauty Studio</span>
+        </a>
 
-<!-- ozdoby: gwiazdka i fala -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z"/></symbol>
-  <symbol id="flower" viewBox="0 0 40 40"><g><circle cx="20" cy="8" r="7"/><circle cx="32" cy="20" r="7"/><circle cx="20" cy="32" r="7"/><circle cx="8" cy="20" r="7"/></g><circle cx="20" cy="20" r="5" fill="#fffaf9"/></symbol>
-</svg>
-<div class="blob blob-1" aria-hidden="true"></div>
-<div class="blob blob-2" aria-hidden="true"></div>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
 
-<header class="header">
-  <div class="container nav">
-    <a href="#top" class="logo">Lumi<span>Beauty Studio</span></a>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
-    <nav class="menu" id="menu">
-      <a href="#uslugi">Usługi</a>
-      <a href="#o-nas">O nas</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#opinie">Opinie</a>
-      <a href="#kontakt" class="btn btn-small">Kontakt</a>
-    </nav>
-  </div>
-</header>
+        <nav class="nav" id="main-navigation" aria-label="Nawigacja główna">
+          <a href="#home">Strona główna</a>
+          <a href="#uslugi">Usługi</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#kontakt">Kontakt</a>
+          <a
+            class="nav-book"
+            href="https://wa.me/481234567890?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99%20w%20Lumi%C3%A8re%20Beauty%20Studio."
+            target="_blank"
+            rel="noopener noreferrer"
+          >Umów wizytę</a>
+        </nav>
+      </div>
+    </header>
 
-<main id="top">
-  <section class="hero">
-    <svg class="spark s1" aria-hidden="true"><use href="#spark"/></svg>
-    <svg class="spark s2" aria-hidden="true"><use href="#spark"/></svg>
-    <svg class="spark s3" aria-hidden="true"><use href="#spark"/></svg>
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Pielęgnacja, która wygląda na Ciebie.</h1>
-        <p>Fryzjer, manicure, kosmetyka twarzy i brwi w jednym miejscu. Spokojna atmosfera, sprawdzone kosmetyki i czas tylko dla Ciebie.</p>
-        <div class="hero-actions">
-          <a href="tel:+48123456789" class="btn">Zadzwoń i umów wizytę</a>
-          <a href="#uslugi" class="btn btn-ghost">Zobacz cennik</a>
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="./src/assets/studio-interior.jpg"
+          alt="Jasne, eleganckie wnętrze Lumière Beauty Studio"
+          fetchpriority="high"
+        />
+        <div class="hero-content">
+          <span class="eyebrow">Lumière Beauty Studio</span>
+          <h1 class="serif" id="hero-title">Twoje piękno.<span>Nasza pasja</span></h1>
+          <p class="hero-copy">
+            Chwila tylko dla Ciebie. Kameralne miejsce, uważna pielęgnacja i piękno,
+            które pozostaje blisko Twojej natury.
+          </p>
+          <a
+            class="button-light"
+            href="https://wa.me/481234567890?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99%20w%20Lumi%C3%A8re%20Beauty%20Studio."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Umów wizytę
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" /></svg>
+          </a>
+        </div>
+        <div class="hero-index" aria-hidden="true">01 <span>·</span> 04</div>
+        <div class="hero-side" aria-hidden="true">Piękno w swoim rytmie</div>
+      </section>
+
+      <section class="intro container" aria-labelledby="intro-title">
+        <div class="intro-grid">
+          <div class="intro-heading">
+            <span class="eyebrow">Miejsce, w którym zwalniasz</span>
+            <h2 class="serif" id="intro-title">Piękno zaczyna się od chwili dla siebie.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              Lumière to małe studio stworzone z myślą o tym, by codzienna pielęgnacja
+              stała się czymś więcej. Spokojnym rytuałem, w którym jesteś naprawdę zaopiekowana.
+            </p>
+            <p>
+              Pracujemy z uważnością i szacunkiem do Twojej naturalnej urody.
+              Bez pośpiechu — z dbałością o każdy detal.
+            </p>
+            <a class="text-link" href="#uslugi">
+              Poznaj nasze usługi
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M6 15h9V6" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="uslugi" aria-labelledby="services-title">
+        <div class="container">
+          <div class="services-top">
+            <div class="section-heading">
+              <span class="eyebrow">Nasza oferta</span>
+              <h2 class="serif" id="services-title">Małe rytuały.<br />Wielka różnica.</h2>
+            </div>
+            <p class="services-intro">
+              Każdy zabieg zaczynamy od rozmowy. Dobieramy pielęgnację do Ciebie,
+              Twoich potrzeb i Twojego tempa.
+            </p>
+          </div>
+
+          <div class="service-layout" id="cennik">
+            <div class="service-photo-wrap">
+              <img
+                class="service-photo"
+                src="./src/assets/manicure-detail.jpg"
+                alt="Delikatny manicure wykonywany z dbałością o każdy detal"
+                loading="lazy"
+              />
+              <span class="photo-caption">Uważność w każdym geście</span>
+            </div>
+            <div class="service-list" aria-label="Cennik usług">
+              <article class="service-row">
+                <h3>Manicure hybrydowy</h3>
+                <p>Precyzyjny kształt i trwały kolor</p>
+                <span class="service-price">120 zł</span>
+              </article>
+              <article class="service-row">
+                <h3>Manicure klasyczny</h3>
+                <p>Naturalna pielęgnacja dłoni i paznokci</p>
+                <span class="service-price">80 zł</span>
+              </article>
+              <article class="service-row">
+                <h3>Pedicure</h3>
+                <p>Komfort i zadbane stopy przez cały rok</p>
+                <span class="service-price">140 zł</span>
+              </article>
+              <article class="service-row">
+                <h3>Stylizacja brwi</h3>
+                <p>Kształt dopasowany do Twojej urody</p>
+                <span class="service-price">70 zł</span>
+              </article>
+              <article class="service-row">
+                <h3>Laminacja rzęs</h3>
+                <p>Podkreślone spojrzenie bez codziennego wysiłku</p>
+                <span class="service-price">130 zł</span>
+              </article>
+              <article class="service-row">
+                <h3>Zabieg na twarz</h3>
+                <p>Indywidualny rytuał dla promiennej skóry</p>
+                <span class="service-price">180 zł</span>
+              </article>
+              <a
+                class="button-dark service-cta"
+                href="https://wa.me/481234567890?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99%20w%20Lumi%C3%A8re%20Beauty%20Studio."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Zapytaj o termin
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ritual container" aria-labelledby="ritual-title">
+        <div class="ritual-grid">
+          <div class="ritual-image-wrap">
+            <img
+              class="ritual-image"
+              src="./src/assets/facial-ritual.jpg"
+              alt="Relaksujący zabieg pielęgnacyjny na twarz"
+              loading="lazy"
+            />
+          </div>
+          <div class="ritual-text">
+            <span class="eyebrow">Twoja przestrzeń</span>
+            <h2 class="serif" id="ritual-title">Zatrzymaj się.<br />Jesteś u siebie.</h2>
+            <p>
+              Wierzymy, że prawdziwa pielęgnacja zaczyna się od poczucia spokoju.
+              Dlatego stworzyłyśmy miejsce, w którym możesz odetchnąć, poczuć się
+              swobodnie i oddać w dobre ręce.
+            </p>
+            <p>Przy filiżance herbaty, w miękkim świetle i bez patrzenia na zegarek.</p>
+            <div class="ritual-note">„Piękno jest w tym, co Twoje.” <span>LUMIÈRE</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-band" aria-label="Nasza filozofia">
+        <blockquote class="serif">„Najpiękniejsza wersja Ciebie<br />to po prostu Ty.”</blockquote>
+        <p>W zgodzie z Twoją naturą</p>
+      </section>
+    </main>
+
+    <footer class="contact" id="kontakt">
+      <div class="container">
+        <div class="contact-top">
+          <div class="contact-title">
+            <span class="eyebrow">Czekamy na Ciebie</span>
+            <h2 class="serif">Twoja chwila<br />zaczyna się tutaj.</h2>
+            <p>
+              Napisz lub zadzwoń — wspólnie znajdziemy termin, który będzie pasował
+              do Twojego rytmu.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="button-light"
+                href="https://wa.me/481234567890?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99%20w%20Lumi%C3%A8re%20Beauty%20Studio."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Umów wizytę
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" /></svg>
+              </a>
+              <a
+                class="instagram-link"
+                href="https://www.instagram.com/lumiere.beauty/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Odwiedź profil Lumière Beauty Studio na Instagramie"
+              >
+                <svg class="instagram-icon" viewBox="0 0 20 20" aria-hidden="true">
+                  <rect x="3" y="3" width="14" height="14" rx="4" />
+                  <circle cx="10" cy="10" r="3.2" />
+                  <circle class="instagram-dot" cx="14.4" cy="5.8" r=".8" />
+                </svg>
+                Instagram
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-details">
+            <div>
+              <span class="detail-label">Zadzwoń do nas</span>
+              <div class="detail-value"><a href="tel:+481234567890">+48 123 456 7890</a></div>
+            </div>
+            <div>
+              <span class="detail-label">Znajdziesz nas</span>
+              <div class="detail-value">Lumière Beauty Studio<br />Adres dostępny przy rezerwacji</div>
+            </div>
+            <div>
+              <span class="detail-label">Godziny wizyt</span>
+              <div class="detail-value">Wizyty po wcześniejszej<br />rezerwacji</div>
+            </div>
+            <div>
+              <span class="detail-label">Napisz do nas</span>
+              <div class="detail-value">
+                <a
+                  href="https://wa.me/481234567890?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20um%C3%B3wi%C4%87%20wizyt%C4%99%20w%20Lumi%C3%A8re%20Beauty%20Studio."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span class="footer-brand">Lumière Beauty Studio</span>
+          <span>Spokojnie. Pięknie. Po Twojemu.</span>
+          <span>© <span id="current-year"></span> Lumière</span>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="ring"></div>
-        <div class="dots"></div>
-        <div class="arch arch-1"></div>
-        <div class="arch arch-2"></div>
-        <div class="circle c1"></div>
-        <div class="circle c2"></div>
-        <svg class="flower f1"><use href="#flower"/></svg>
-        <div class="badge"><strong>5 lat</strong> doświadczenia</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee" aria-hidden="true">
-    <div class="track">
-      <span>Fryzjer</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Manicure</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Kosmetyka twarzy</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Brwi i rzęsy</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Pedicure</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Koloryzacja</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Fryzjer</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Manicure</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Kosmetyka twarzy</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Brwi i rzęsy</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Pedicure</span><svg class="spark"><use href="#spark"/></svg>
-      <span>Koloryzacja</span><svg class="spark"><use href="#spark"/></svg>
-    </div>
-  </div>
-
-  <section class="section" id="uslugi">
-    <div class="container reveal">
-      <svg class="orn" aria-hidden="true"><use href="#flower"/></svg>
-      <h2>Usługi i cennik</h2>
-      <p class="lead">Wybierz kategorię, aby zobaczyć ceny. Dokładną cenę ustalamy po konsultacji.</p>
-      <div class="tabs" role="tablist">
-        <button class="tab active" data-tab="wlosy" role="tab"> Włosy</button>
-        <button class="tab" data-tab="paznokcie" role="tab"> Paznokcie</button>
-        <button class="tab" data-tab="twarz" role="tab"> Twarz</button>
-        <button class="tab" data-tab="brwi" role="tab"> Brwi i rzęsy</button>
-      </div>
-      <div class="price-box">
-        <ul class="price-list active" id="wlosy">
-          <li><span>Strzyżenie damskie</span><b>od 90 zł</b></li>
-          <li><span>Strzyżenie męskie</span><b>od 60 zł</b></li>
-          <li><span>Koloryzacja</span><b>od 220 zł</b></li>
-          <li><span>Balayage / ombre</span><b>od 450 zł</b></li>
-          <li><span>Keratynowe prostowanie</span><b>od 350 zł</b></li>
-        </ul>
-        <ul class="price-list" id="paznokcie">
-          <li><span>Manicure klasyczny</span><b>70 zł</b></li>
-          <li><span>Manicure hybrydowy</span><b>110 zł</b></li>
-          <li><span>Przedłużanie żelem</span><b>od 180 zł</b></li>
-          <li><span>Pedicure hybrydowy</span><b>150 zł</b></li>
-        </ul>
-        <ul class="price-list" id="twarz">
-          <li><span>Oczyszczanie manualne</span><b>160 zł</b></li>
-          <li><span>Peeling kawitacyjny</span><b>120 zł</b></li>
-          <li><span>Mezoterapia mikroigłowa</span><b>od 280 zł</b></li>
-          <li><span>Zabieg nawilżający</span><b>180 zł</b></li>
-        </ul>
-        <ul class="price-list" id="brwi">
-          <li><span>Henna brwi</span><b>50 zł</b></li>
-          <li><span>Laminacja brwi</span><b>130 zł</b></li>
-          <li><span>Lifting rzęs</span><b>150 zł</b></li>
-          <li><span>Rzęsy 1:1</span><b>200 zł</b></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="wave top"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40C240 80 480 0 720 30s480 50 720 10V80H0z"/></svg></div>
-  <section class="section alt" id="o-nas">
-    <div class="container about reveal">
-      <div>
-        <svg class="orn" aria-hidden="true"><use href="#flower"/></svg>
-        <h2>Mały salon, duża dbałość o szczegóły</h2>
-        <p>Jesteśmy zespołem trzech stylistek, które łączy jedno: lubimy, gdy klientka wychodzi zadowolona i pewna siebie. Pracujemy na profesjonalnych produktach, a każdą wizytę zaczynamy od rozmowy o Twoich potrzebach.</p>
-        <p>Dbamy o higienę, punktualność i spokojną atmosferę – bez pośpiechu.</p>
-      </div>
-      <ul class="facts">
-        <li><b>3</b> stylistki</li>
-        <li><b>200+</b> zadowolonych klientek</li>
-        <li><b>100%</b> sterylizowane narzędzia</li>
-      </ul>
-    </div>
-  </section>
-  <div class="wave bottom"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40C240 80 480 0 720 30s480 50 720 10V80H0z"/></svg></div>
-
-  <section class="section" id="galeria">
-    <div class="container reveal">
-      <svg class="orn" aria-hidden="true"><use href="#flower"/></svg>
-      <h2>Galeria</h2>
-      <p class="lead">Tutaj wstaw zdjęcia swoich prac – wystarczy podmienić tło każdego kafelka na własne zdjęcie.</p>
-      <div class="gallery">
-        <div class="g g1"><svg class="spark"><use href="#spark"/></svg></div>
-        <div class="g g2"><svg class="spark"><use href="#spark"/></svg></div>
-        <div class="g g3"><svg class="spark"><use href="#spark"/></svg></div>
-        <div class="g g4"><svg class="spark"><use href="#spark"/></svg></div>
-        <div class="g g5"><svg class="spark"><use href="#spark"/></svg></div>
-        <div class="g g6"><svg class="spark"><use href="#spark"/></svg></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wave top"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40C240 80 480 0 720 30s480 50 720 10V80H0z"/></svg></div>
-  <section class="section alt" id="opinie">
-    <div class="container reveal">
-      <svg class="orn" aria-hidden="true"><use href="#flower"/></svg>
-      <h2>Opinie klientek</h2>
-      <div class="reviews">
-        <blockquote><p>Najlepsza koloryzacja, jaką miałam. Dokładnie taki kolor, jak chciałam, i włosy w świetnym stanie.</p><cite>Karolina M.</cite></blockquote>
-        <blockquote><p>Hybryda trzyma się ponad trzy tygodnie. Miła atmosfera i zawsze punktualnie.</p><cite>Agnieszka W.</cite></blockquote>
-        <blockquote><p>Laminacja brwi to strzał w dziesiątkę. Polecam każdej, kto chce wyglądać naturalnie.</p><cite>Magda S.</cite></blockquote>
-      </div>
-    </div>
-  </section>
-  <div class="wave bottom"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40C240 80 480 0 720 30s480 50 720 10V80H0z"/></svg></div>
-
-  <section class="section" id="kontakt">
-    <div class="container">
-      <div class="contact-card reveal">
-        <svg class="spark k1" aria-hidden="true"><use href="#spark"/></svg>
-        <svg class="spark k2" aria-hidden="true"><use href="#spark"/></svg>
-        <div class="circle k3" aria-hidden="true"></div>
-        <h2>Umów wizytę</h2>
-        <p class="lead">Zadzwoń lub napisz – wspólnie wybierzemy dogodny termin.</p>
-        <div class="contact-btns">
-          <a class="btn btn-light" href="tel:+48123456789">📞 +48 123 456 789</a>
-          <a class="btn btn-ghost-light" href="https://wa.me/48123456789">💬 WhatsApp</a>
-          <a class="btn btn-ghost-light" href="mailto:kontakt@lumibeauty.pl">✉️ E-mail</a>
-        </div>
-        <ul class="info">
-          <li><b>Adres</b>ul. Przykładowa 12, 00-000 Miasto</li>
-          <li><b>Godziny otwarcia</b>pon.–pt. 9:00–20:00, sob. 9:00–15:00</li>
-          <li><b>Instagram</b><a href="https://instagram.com/" target="_blank" rel="noopener">@lumibeauty</a></li>
-        </ul>
-        <a class="map-link" href="https://maps.google.com/?q=ul.+Przykładowa+12" target="_blank" rel="noopener">Zobacz na mapie →</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <span>© <span id="year"></span> Lumi Beauty Studio. Wszelkie prawa zastrzeżone.</span>
-    <a href="#top">Wróć na górę</a>
-  </div>
-</footer>
-
-<!-- pasek na telefonie -->
-<div class="mobile-bar">
-  <a href="tel:+48123456789" class="btn">📞 Zadzwoń</a>
-  <a href="#uslugi" class="btn btn-ghost">Cennik</a>
-</div>
-
-<script src="script.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
